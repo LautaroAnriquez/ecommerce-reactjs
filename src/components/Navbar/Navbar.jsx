@@ -4,7 +4,7 @@ import './Navbar.css'
 export const Navbar = () => {
   return (
     <div>
-        <h1>SneakersAR</h1>
+        <img src="https://res.cloudinary.com/dtl2ucf3y/image/upload/v1754499949/logo-proyecto_aykkxu.png" alt="" />
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#productos">Productos</a></li>

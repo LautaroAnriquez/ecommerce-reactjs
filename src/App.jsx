@@ -1,11 +1,11 @@
-import ItemListContainer from "./components/itemListContainer/itemListContainer";
-import { Navbar } from "./components/Navbar/Navbar"
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer"
+import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <ItemListContainer greeting = "Bienvenidos a SneakersAR, la mejor tienda de zapatillas del país"/>
+      <ItemListContainer/>
     </div>
   );
 }
