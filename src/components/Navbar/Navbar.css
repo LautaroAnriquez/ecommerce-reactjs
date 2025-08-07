@@ -1,4 +1,6 @@
 ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,10 +9,7 @@ ul {
   }
   
   li {
-    float: left;
-  }
-  
-  li a {
+    float: center;
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -18,7 +17,13 @@ ul {
     text-decoration: none;
     font-weight: bold;
   }
+  
+ 
 
   li a:hover {
     background-color: #ffffff;
   }
+
+img {
+  width: 150px;
+}

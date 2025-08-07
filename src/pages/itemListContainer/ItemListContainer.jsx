@@ -1,17 +1,19 @@
 import {useEffect, useState} from "react";
 import {productsMock} from "../../productsMock";
 import ProductCard from "../../components/common/productCard/ProductCard";
+import { useParams } from "react-router";
 
 export const ItemListContainer = () => {
     
     const [items, setItems] = useState([]);
-
+    const {d} = useParams();
     useEffect (() => {
+        const productsFiltered = productsMock.filter(producto => producto.category === d);
         const getProducts = new Promise ((resolve) => {
-            resolve  (productsMock);
+            resolve  (d ? productsFiltered : productsMock);
         });
         getProducts.then((res) => setItems(res));
-    }, []);
+    }, [d]);
     
     return (
         <div>
