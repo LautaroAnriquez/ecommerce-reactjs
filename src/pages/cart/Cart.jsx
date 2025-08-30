@@ -1,5 +1,6 @@
 import {CartContext} from "../../context/CartContext";
 import React, {useContext} from "react";
+import {Link} from "react-router";
 
 
 const Cart = () => {
@@ -7,7 +8,7 @@ const Cart = () => {
   let total = getTotalAmount();
   return (
     <div>
-        <h1>carrito</h1>
+        <h1>Tu carrito</h1>
         {
           cart.map ((producto) => {
             return (
@@ -22,6 +23,7 @@ const Cart = () => {
         }
         <h3>Total : ${total}</h3>
         <button onClick={resetCart}>Vaciar carrito</button>
+        <Link to = "/checkout">Finalizar compra</Link>
     </div>
   )
 }

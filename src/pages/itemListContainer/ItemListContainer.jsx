@@ -1,19 +1,38 @@
 import {useEffect, useState} from "react";
-import {productsMock} from "../../productsMock";
+//import {productsMock} from "../../productsMock";
 import ProductCard from "../../components/common/productCard/ProductCard";
 import { useParams } from "react-router";
+import {dataBase} from "../../firebase";
+import {collection, getDocs, query, where} from "firebase/firestore";
 
 export const ItemListContainer = () => {
     
     const [items, setItems] = useState([]);
     const {d} = useParams();
     useEffect (() => {
-        const productsFiltered = productsMock.filter(producto => producto.category === d);
-        const getProducts = new Promise ((resolve) => {
-            resolve  (d ? productsFiltered : productsMock);
+        //const productsFiltered = productsMock.filter(producto => producto.category === d);
+        //const getProducts = new Promise ((resolve) => {
+            //resolve  (d ? productsFiltered : productsMock);
+        //});
+        //getProducts.then((res) => setItems(res));
+
+        let productsCollection = collection (dataBase, "products");
+        let consult = productsCollection
+        if (d) {
+          let filter = query (productsCollection, where ("category", "==", d));
+          consult = filter
+        }
+        
+        let getProducts = getDocs (consult);
+        getProducts.then((res) => {
+            let array = res.docs.map((elemento)=>{
+                return {id: elemento.id, ...elemento.data()}
+            })
+            setItems (array)
         });
-        getProducts.then((res) => setItems(res));
     }, [d]);
+
+    
     
     return (
         <div>

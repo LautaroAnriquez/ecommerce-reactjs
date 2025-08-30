@@ -9,15 +9,18 @@ const CartContextProvider = ({children}) => {
         let arrayFiltrado = cart.filter((elemento) => elemento.id !== id);
         setCart(arrayFiltrado);
     };
+
     const resetCart = () => {
         setCart([]);
     };
+    
     const getTotalAmount = () => {
     let total = cart.reduce((acc, elemento) => {
       return acc+elemento.price*elemento.cantidad;
     }, 0);
     return total;
     };
+    
     const getTotalQuantity = () => {
     let total = cart.reduce((acc, elemento) => {
       return acc + elemento.cantidad;
