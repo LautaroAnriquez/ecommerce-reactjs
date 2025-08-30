@@ -25,8 +25,8 @@ const Cart = () => {
         <h3>Total : ${total}</h3>
         <button onClick={resetCart}>Vaciar carrito</button>
         {cart.length >= 1 && <Link to = "/checkout">Finalizar compra</Link>} 
-        
-    </div>
+    </div>    
+    
   )
 }
 
