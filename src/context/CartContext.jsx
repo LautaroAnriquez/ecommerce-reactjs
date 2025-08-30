@@ -18,6 +18,7 @@ const CartContextProvider = ({children}) => {
     let total = cart.reduce((acc, elemento) => {
       return acc+elemento.price*elemento.cantidad;
     }, 0);
+    
     return total;
     };
     

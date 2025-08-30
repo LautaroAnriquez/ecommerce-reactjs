@@ -12,11 +12,9 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     
     useEffect(() => {
-        //const element=productsMock.find((producto) => producto.id === id);
         let productsCollection = collection (dataBase, "products")
         let refDoc = doc (productsCollection, id)
         getDoc (refDoc).then((res) => setProduct ({id: res.id, ...res.data()}))
-        //setProduct(element);
     }, [id]);
         
     

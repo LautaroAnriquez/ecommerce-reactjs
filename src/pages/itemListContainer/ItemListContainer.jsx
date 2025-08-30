@@ -8,14 +8,10 @@ import {collection, getDocs, query, where} from "firebase/firestore";
 export const ItemListContainer = () => {
     
     const [items, setItems] = useState([]);
-    const {d} = useParams();
-    useEffect (() => {
-        //const productsFiltered = productsMock.filter(producto => producto.category === d);
-        //const getProducts = new Promise ((resolve) => {
-            //resolve  (d ? productsFiltered : productsMock);
-        //});
-        //getProducts.then((res) => setItems(res));
 
+    const {d} = useParams();
+
+    useEffect (() => {
         let productsCollection = collection (dataBase, "products");
         let consult = productsCollection
         if (d) {
@@ -32,8 +28,6 @@ export const ItemListContainer = () => {
         });
     }, [d]);
 
-    
-    
     return (
         <div>
             <div style={{display: "flex", gap: "10px", justifyContent: "center", textAlign: "center"}}>

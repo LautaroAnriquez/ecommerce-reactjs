@@ -1,5 +1,4 @@
 import { FaCartShopping } from "react-icons/fa6";
-//import {Link} from "react-router";
 import {useContext} from "react";
 import {CartContext} from "../../context/CartContext"
 
@@ -7,15 +6,7 @@ export const CartWidget = () => {
   const {getTotalQuantity} = useContext(CartContext);
   let total = getTotalQuantity();
   return (
-    //<Link style={{color: "black"}} to="/carrito">
-      //<div
-        //style={{
-         // display: "flex",
-          //gap: "12px",
-         // alignItems: "center",
-         // padding: "7px",
-       // }}
-      //>
+    
         <div style={{position: "relative", display : "inline-block", color:"black", padding:"5px"}}>
         <FaCartShopping size={35}/>
           <div
@@ -40,8 +31,7 @@ export const CartWidget = () => {
             {total}
           </div>
         </div>
-     // </div>  
-   // </Link>
+     
     )
 }     
       

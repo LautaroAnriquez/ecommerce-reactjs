@@ -20,6 +20,7 @@ const Checkout = () => {
             items: cart,
             total: total,
         };
+
         let ordersCollection = collection (dataBase, "orders")
         let res = addDoc (ordersCollection, object)
         res.then((res) => {
@@ -28,6 +29,7 @@ const Checkout = () => {
         }).catch ((error) => {alert ("Hubo un error al ralizar la compra. Vuelva a intentar");
         console.log (error);
         });
+        
         let productsCollection = collection (dataBase, "products");
         object.items.forEach ((elemento) => {
             let productRef = doc (productsCollection, elemento.id);

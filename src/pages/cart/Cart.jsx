@@ -6,6 +6,7 @@ import {Link} from "react-router";
 const Cart = () => {
   const {cart,resetCart,removeById,getTotalAmount} = useContext (CartContext)
   let total = getTotalAmount();
+  
   return (
     <div>
         <h1>Tu carrito</h1>

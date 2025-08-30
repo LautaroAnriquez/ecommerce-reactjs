@@ -10,6 +10,7 @@ const Counter = ({product}) => {
       setContador(contador + 1);
     } 
   };
+
   const restar = () => {
     setContador(contador - 1);
   };
@@ -19,6 +20,7 @@ const Counter = ({product}) => {
     addToCart(productoConCantidad);
     alert ("producto agregado al carrito");
   };
+  
   return (
     <div style={{display:"flex", gap:"10px"}}>
         <button onClick={restar} disabled={contador === 1}>-</button>
