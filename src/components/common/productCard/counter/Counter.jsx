@@ -20,11 +20,11 @@ const Counter = ({product}) => {
     alert ("producto agregado al carrito");
   };
   return (
-    <div>
+    <div style={{display:"flex", gap:"10px"}}>
         <button onClick={restar} disabled={contador === 1}>-</button>
         <h3>{contador}</h3>
         <button onClick={sumar} disabled={contador === product.stock}>+</button>
-        <button onClick={agregarAlCarrito}>Agregar ak carrito</button>
+        <button onClick={agregarAlCarrito}>Agregar al carrito</button>
     </div>
   )
 }
