@@ -13,6 +13,7 @@ const Cart = () => {
           cart.map ((producto) => {
             return (
               <div key={producto.id}>
+                <img src={producto.imageUrl} alt="" />
                 <h2>{producto.title}</h2>
                 <h2>${producto.price}</h2>
                 <h2>x{producto.cantidad}</h2>

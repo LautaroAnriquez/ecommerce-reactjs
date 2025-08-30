@@ -23,6 +23,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
+        <img src={product.imageUrl} alt="" />
         <h3>{product.title}</h3>
         <h3>{product.desciption}</h3>
         <h3>{product.price}</h3>
