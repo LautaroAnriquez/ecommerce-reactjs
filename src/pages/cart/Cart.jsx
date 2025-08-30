@@ -12,7 +12,7 @@ const Cart = () => {
         {
           cart.map ((producto) => {
             return (
-              <div key={producto.id}>
+              <div key={producto.id} style= {{display: "flex", flexDirection:"column", gap: "24px", border: "1px solid black", width: "400px"}}>
                 <img src={producto.imageUrl} alt="" />
                 <h2>{producto.title}</h2>
                 <h2>${producto.price}</h2>

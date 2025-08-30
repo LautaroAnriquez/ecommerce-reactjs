@@ -27,7 +27,7 @@ export const productsMock = [
         description: "Para los amantes del trail",
         price: 200,
         stock: 10,
-        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1754499947/adidas-forum_iml7ah.png",
+        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756518123/terrex_elnktb.png",
         category: "deportiva"
 
     },
@@ -38,7 +38,7 @@ export const productsMock = [
         description: "Lo mejor en tecnología para running",
         price: 150,
         stock: 7,
-        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1754499947/puma-rsz-reinvent_egiazw.png",
+        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756518123/vomero18_h9waaw.png",
         category: "deportiva"
 
     },
