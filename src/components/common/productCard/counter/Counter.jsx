@@ -18,15 +18,15 @@ const Counter = ({product}) => {
   const agregarAlCarrito = () => {
     let productoConCantidad = { ...product, cantidad: contador };
     addToCart(productoConCantidad);
-    alert ("producto agregado al carrito");
+    alert ("Producto agregado al carrito");
   };
   
   return (
     <div style={{display:"flex", gap:"10px"}}>
-        <button onClick={restar} disabled={contador === 1}>-</button>
+        <button onClick={restar} disabled={contador === 1} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer"}}>-</button>
         <h3>{contador}</h3>
-        <button onClick={sumar} disabled={contador === product.stock}>+</button>
-        <button onClick={agregarAlCarrito}>Agregar al carrito</button>
+        <button onClick={sumar} disabled={contador === product.stock} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer"}}>+</button>
+        <button onClick={agregarAlCarrito} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer"}}>Agregar al carrito</button>
     </div>
   )
 }

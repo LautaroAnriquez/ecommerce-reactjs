@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div style={{margin:"30px"}}>
-        <img src={product.imageUrl} alt="" />
+        <img src={product.imageUrl} alt="" style={{border:"solid 2px black"}}/>
         <h3>{product.title}</h3>
         <h3>{product.desciption}</h3>
         <h3>{product.price}</h3>
