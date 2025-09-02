@@ -18,7 +18,8 @@ const ProductCard = ({product}) => {
         padding: "10px 20px", 
         backgroundColor: "black", 
         color: "#19a2cc", 
-        fontSize:"15px"
+        fontSize:"15px",
+        textDecoration:"none"
          }}>Detalle</Link>
     </div>
   )

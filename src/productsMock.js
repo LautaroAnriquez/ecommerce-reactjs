@@ -27,7 +27,7 @@ export const productsMock = [
         description: "Para los amantes del trail",
         price: 200,
         stock: 10,
-        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756518123/terrex_elnktb.png",
+        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756849981/terrex500_objsvf.jpg",
         category: "deportiva"
 
     },
@@ -38,7 +38,7 @@ export const productsMock = [
         description: "Lo mejor en tecnología para running",
         price: 150,
         stock: 7,
-        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756518123/vomero18_h9waaw.png",
+        imageUrl: "https://res.cloudinary.com/dtl2ucf3y/image/upload/v1756849982/vomero18500_sceww1.jpg",
         category: "deportiva"
 
     },

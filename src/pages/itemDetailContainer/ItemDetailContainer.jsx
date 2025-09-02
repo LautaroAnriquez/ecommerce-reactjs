@@ -20,11 +20,10 @@ const ItemDetailContainer = () => {
     
 
   return (
-    <div style={{margin:"30px"}}>
+    <div style={{display:"flex", flexDirection:"column", alignItems:"center", margin:"30px"}}>
         <img src={product.imageUrl} alt="" style={{border:"solid 2px black"}}/>
-        <h3>{product.title}</h3>
-        <h3>{product.desciption}</h3>
-        <h3>{product.price}</h3>
+        <h3 style={{margin:"5px"}}>{product.title}</h3>
+        <h3 style={{margin:"5px"}}>${product.price}</h3>
         <Counter product={product}/>
     </div>
   );

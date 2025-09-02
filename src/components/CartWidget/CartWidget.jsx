@@ -6,8 +6,8 @@ export const CartWidget = () => {
   const {getTotalQuantity} = useContext(CartContext);
   let total = getTotalQuantity();
   return (
-    
-        <div style={{position: "relative", display : "inline-block", color:"black", padding:"5px"}}>
+        
+        <div style={{position: "relative", display : "flex", justifyContent:"right", color:"black", padding:"5px"}}>
         <FaCartShopping size={35}/>
           <div
             style={{
@@ -28,10 +28,10 @@ export const CartWidget = () => {
               margin: "8px"
             }}
           >
-            {total}
+          {total}
           </div>
         </div>
-     
+    
     )
 }     
       
