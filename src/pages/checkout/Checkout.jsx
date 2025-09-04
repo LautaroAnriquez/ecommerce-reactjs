@@ -41,27 +41,53 @@ const Checkout = () => {
 
   return (
     <div>
-        <h1>Complete el formulario para finalizar la compra</h1>
+        <h1 style={{margin:"3px"}}>Complete el formulario para finalizar la compra</h1>
         {orderId ? (
-            <h2>Gracias por la compra. Su número de orden es: {orderId}</h2>
+            <h2 style={{margin:"3px"}}>Gracias por la compra. Su número de orden es: {orderId}</h2>
         ) : (
-           <form onSubmit = {submit}>
+        <form onSubmit = {submit}>
             <input 
             type="text" 
             placeholder="Nombre"
             name="nombre" 
-            onChange= {change} />
+            onChange= {change} 
+            style={{
+            padding: '10px',
+            border: '2px solid #19a2cc',
+            fontSize: '16px',
+            margin:"3px"
+            }}/>
             <input 
             type="text" 
             placeholder="Teléfono" 
             name="telefono"
-            onChange={change}/>
+            onChange={change}
+            style={{
+            padding: '10px',
+            border: '2px solid #19a2cc',
+            fontSize: '16px',
+            margin:"3px"
+            }}/>
             <input 
             type="text" 
             placeholder="Email" 
             name="email"
-            onChange={change}/>
-            <button>Comprar</button>
+            onChange={change}
+            style={{
+            padding: '10px',
+            border: '2px solid #19a2cc',
+            fontSize: '16px',
+            margin:"3px"
+            }}/>
+            <button style={{
+            backgroundColor: "#19a2cc",
+            color:"black", border:"none",
+            padding:"14px",
+            cursor:"pointer",
+            fontWeight:"bold",
+            margin:"10px",
+            textDecoration:"none",
+            textAlign:"center"}}>Comprar</button>
         </form> 
         )}
     </div>

@@ -13,7 +13,7 @@ const Cart = () => {
         {
           cart.map ((producto) => {
             return (
-              <div key={producto.id} style= {{display: "flex", gap: "24px", border: "1px solid black", alignItems:"center"}}>
+              <div key={producto.id} style= {{display: "flex", gap: "24px", border: "1px solid black", alignItems:"center", marginBottom:"1px"}}>
                 <img src={producto.imageUrl} alt="" style={{width:"100px"}}/>
                 <h2>{producto.title}</h2>
                 <h2>${producto.price}</h2>
