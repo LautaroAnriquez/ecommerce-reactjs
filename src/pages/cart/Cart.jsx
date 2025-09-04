@@ -19,13 +19,13 @@ const Cart = () => {
                 <h2>${producto.price}</h2>
                 <h2>x{producto.cantidad}</h2>
                 <button onClick={()=>removeById(producto.id)} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer", fontWeight:"bold"}}>Eliminar del carrito</button>
+                <button onClick={resetCart} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer", fontWeight:"bold"}}>Vaciar carrito</button>
               </div>
             );
           })
         }
-        <div style={{display:"flex", flexDirection:"column", width:"110px", alignItems:"center"}}>
-          <h3>Total : ${total}</h3>
-          <button onClick={resetCart} style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"10px", cursor:"pointer", fontWeight:"bold"}}>Vaciar carrito</button>
+        <div style={{display:"flex", alignItems:"center", gap:"50px"}}>
+          <h3 style={{fontSize:"30px"}}>Total: ${total}</h3>
           {cart.length >= 1 && <Link to = "/checkout" style={{backgroundColor: "#19a2cc", color:"black", border:"none", padding:"20px", cursor:"pointer", fontWeight:"bold", margin:"20px", textDecoration:"none", textAlign:"center"}}>Finalizar compra</Link>} 
         </div>
     </div>     
